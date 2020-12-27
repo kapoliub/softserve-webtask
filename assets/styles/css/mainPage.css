@@ -1,0 +1,18 @@
+.content-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto; }
+  .content-wrapper .main-image-wrapper {
+    position: relative;
+    z-index: -1; }
+    .content-wrapper .main-image-wrapper img {
+      width: 100%; }
+  .content-wrapper .section-wrapper {
+    padding: 20px; }
+    .content-wrapper .section-wrapper .title {
+      font-size: 1.5em;
+      font-weight: bold;
+      padding-bottom: 15px; }
+    .content-wrapper .section-wrapper .text {
+      font-size: 1.1em;
+      line-height: 1.3em; }

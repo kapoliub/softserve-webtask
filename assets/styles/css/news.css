@@ -1,0 +1,62 @@
+.content-wrapper {
+  margin: 30px 0; }
+  .content-wrapper .page-title {
+    font-size: 2.1em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px; }
+  .content-wrapper .news-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .content-wrapper .news-wrapper .news-card {
+      cursor: pointer;
+      max-width: 350px;
+      width: 100%;
+      max-height: 500px;
+      height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      padding: 15px;
+      -webkit-box-shadow: 1px 1px 5px grey;
+              box-shadow: 1px 1px 5px grey;
+      border-radius: 10px;
+      margin: 15px auto; }
+      .content-wrapper .news-wrapper .news-card:hover {
+        -webkit-transform: scale(1.05);
+                transform: scale(1.05);
+        -webkit-transition: .1s;
+        transition: .1s; }
+      .content-wrapper .news-wrapper .news-card .img-wrapper {
+        margin-bottom: 15px; }
+        .content-wrapper .news-wrapper .news-card .img-wrapper img {
+          width: 100%;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px; }
+      .content-wrapper .news-wrapper .news-card h3 {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 15px; }
+      .content-wrapper .news-wrapper .news-card p {
+        line-height: 20px;
+        text-align: justify; }
