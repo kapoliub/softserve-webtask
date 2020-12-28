@@ -58,51 +58,27 @@
     </header>
     <main class="content-wrapper">
       <h1 class="page-title">Fans comments</h1>
-      <div class="comments-wrapper">
-        <div class="comment-block">
-          <p class="comment-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, a
-            necessitatibus libero autem repellendus at voluptates recusandae,
-            nihil molestias quam nisi eaque deserunt, eum possimus deleniti
-            doloribus dolorum? Est, hic! Iusto eaque aperiam eum quasi! Eveniet
-            ab in perferendis enim facilis eos ex deleniti similique voluptatem
-            totam, numquam ipsum possimus necessitatibus ea sed beatae eum esse
-            quod. Eius, a iusto. Maiores dolores modi enim libero nesciunt
-            impedit, commodi quae odit quo! Iste, pariatur optio! Maxime soluta
-            id sapiente natus quaerat, hic quae nemo ipsa dolor fugiat molestias
-            laboriosam voluptas expedita!
-          </p>
-          <div class="comment-info">
-            <span class="date">10.10.2020, 18:40</span>
-            <span class="nickname">YourFan77</span>
-          </div>
-        </div>
-        <div class="comment-block">
-          <p class="comment-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, a
-            necessitatibus libero autem repellendus at voluptates recusandae,
-            nihil molestias quam nisi eaque deserunt, eum possimus deleniti
-            doloribus dolorum? Est, hic! Iusto eaque aperiam eum quasi! Eveniet
-            ab in perferendis enim facilis eos ex deleniti similique voluptatem
-            totam, numquam ipsum possimus necessitatibus ea sed beatae eum esse
-            quod. Eius, a iusto. Maiores dolores modi enim libero nesciunt
-            impedit, commodi quae odit quo! Iste, pariatur optio! Maxime soluta
-            id sapiente natus quaerat, hic quae nemo ipsa dolor fugiat molestias
-            laboriosam voluptas expedita!
-          </p>
-          <div class="comment-info">
-            <span class="date">10.10.2020, 18:40</span>
-            <span class="nickname">YourFan77</span>
-          </div>
-        </div>
-      </div>
+      <div class="comments-wrapper" id="mainContent"></div>
       <div class="add-comment-wrapper">
-          <textarea name="comment" id="commentTextarea" placeholder="Type your comment here..."></textarea>
-          <button>Send</button>
+        <input
+          type="text"
+          name="nickname"
+          id="nickname"
+          placeholder="Nickname"
+        />
+        <div class="textarea-wrapper">
+          <textarea
+            name="comment"
+            id="postInput"
+            placeholder="Type your comment here..."
+          ></textarea>
+          <button id="addPost">Send</button>
+        </div>
       </div>
     </main>
     <footer class="footer">
       <p>Footer</p>
     </footer>
+    <script src="../assets/js/posts.js"></script>
   </body>
 </html>

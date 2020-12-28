@@ -1,0 +1,31 @@
+{
+  "name": "webtask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "scripts": {
+    "start": " open ./index.html && node ./db/index.js",
+    "dev": "nodemon ./db/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kapoliub/softserve-webtask.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kapoliub/softserve-webtask/issues"
+  },
+  "homepage": "https://github.com/kapoliub/softserve-webtask#readme"
+}

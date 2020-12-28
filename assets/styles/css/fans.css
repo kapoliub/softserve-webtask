@@ -1,3 +1,6 @@
+.error-input {
+  border-color: red !important; }
+
 .content-wrapper {
   margin: 30px 0; }
   .content-wrapper .page-title {
@@ -34,38 +37,54 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
     max-width: 900px;
     padding: 15px;
     margin: 0 auto; }
-    .content-wrapper .add-comment-wrapper textarea {
+    .content-wrapper .add-comment-wrapper input[name='nickname'] {
       border: 1px solid #50b1f9;
       padding: 10px;
       font-size: 1.1em;
-      height: 100px;
-      border-right: none;
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
-      width: 90%; }
-    .content-wrapper .add-comment-wrapper button {
-      background-color: #50b1f9;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      width: 10%;
-      border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px; }
-      .content-wrapper .add-comment-wrapper button:hover {
-        color: white; }
-      .content-wrapper .add-comment-wrapper button:active {
-        -webkit-transform: translate3d(1px, 1px, 0);
-                transform: translate3d(1px, 1px, 0); }
+      border-radius: 10px;
+      margin-bottom: 15px; }
+    .content-wrapper .add-comment-wrapper .textarea-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      width: 100%;
+      margin: 0 auto; }
+      .content-wrapper .add-comment-wrapper .textarea-wrapper textarea {
+        border: 1px solid #50b1f9;
+        padding: 10px;
+        font-size: 1.1em;
+        height: 100px;
+        border-right: none;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 90%; }
+      .content-wrapper .add-comment-wrapper .textarea-wrapper button {
+        background-color: #50b1f9;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        width: 10%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px; }
+        .content-wrapper .add-comment-wrapper .textarea-wrapper button:hover {
+          color: white; }
+        .content-wrapper .add-comment-wrapper .textarea-wrapper button:active {
+          -webkit-transform: translate3d(1px, 1px, 0);
+                  transform: translate3d(1px, 1px, 0); }
 
 @media (max-width: 425px) {
-  .content-wrapper .add-comment-wrapper {
+  .content-wrapper .add-comment-wrapper .textarea-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -76,7 +95,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-    .content-wrapper .add-comment-wrapper textarea {
+    .content-wrapper .add-comment-wrapper .textarea-wrapper textarea {
       border-right: 1px solid #50b1f9;
       border-bottom: none;
       border-radius: initial;
@@ -84,7 +103,7 @@
       border-top-right-radius: 10px;
       padding: 10px;
       width: 100%; }
-    .content-wrapper .add-comment-wrapper button {
+    .content-wrapper .add-comment-wrapper .textarea-wrapper button {
       background-color: #50b1f9;
       border: none;
       outline: none;
@@ -94,8 +113,8 @@
       border-radius: initial;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px; }
-      .content-wrapper .add-comment-wrapper button:hover {
+      .content-wrapper .add-comment-wrapper .textarea-wrapper button:hover {
         color: white; }
-      .content-wrapper .add-comment-wrapper button:active {
+      .content-wrapper .add-comment-wrapper .textarea-wrapper button:active {
         -webkit-transform: translate3d(1px, 1px, 0);
                 transform: translate3d(1px, 1px, 0); } }
