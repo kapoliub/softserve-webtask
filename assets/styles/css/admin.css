@@ -6,15 +6,55 @@
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+          flex-direction: column; }
   .content-wrapper .page-title {
     font-size: 2.1em;
     font-weight: bold;
     text-align: center;
     margin-bottom: 15px; }
+  .content-wrapper .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .content-wrapper .content .login-form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 400px; }
+      .content-wrapper .content .login-form input {
+        border: 1px solid #50b1f9;
+        padding: 10px;
+        font-size: 1.1em;
+        border-radius: 10px;
+        margin-bottom: 30px; }
+      .content-wrapper .content .login-form button {
+        background-color: #50b1f9;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        height: 50px;
+        max-width: 500px;
+        width: 100%;
+        border-radius: 10px; }
+        .content-wrapper .content .login-form button:hover {
+          color: white; }
+        .content-wrapper .content .login-form button:active {
+          -webkit-box-shadow: inset 1px 1px 5px grey;
+                  box-shadow: inset 1px 1px 5px grey; }
+  .content-wrapper #uploadPhoto {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer; }
   .content-wrapper .addButton {
     background-color: #50b1f9;
     border: none;
@@ -24,12 +64,22 @@
     width: 150px;
     -ms-flex-item-align: center;
         align-self: center;
-    border-radius: 10px; }
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    cursor: pointer; }
     .content-wrapper .addButton:hover {
       color: white; }
     .content-wrapper .addButton:active {
-      -webkit-transform: translate3d(1px, 1px, 0);
-              transform: translate3d(1px, 1px, 0); }
+      -webkit-box-shadow: inset 1px 1px 5px grey;
+              box-shadow: inset 1px 1px 5px grey; }
   .content-wrapper .add-image-block {
     max-width: 1200px;
     width: 100%;
@@ -91,6 +141,20 @@
         width: 100%;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px; }
+
+footer button {
+  background-color: #50b1f9;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  height: 50px;
+  font-size: 1.1em;
+  border-radius: 10px; }
+  footer button:hover {
+    color: white; }
+  footer button:active {
+    -webkit-box-shadow: inset 1px 1px 5px grey;
+            box-shadow: inset 1px 1px 5px grey; }
 
 @media (max-width: 768px) {
   .content-wrapper .addButton {

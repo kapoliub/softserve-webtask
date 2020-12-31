@@ -3,78 +3,61 @@ const postInput = document.querySelector("#postInput");
 const nicknameInput = document.querySelector("#nickname");
 
 const URI = "http://localhost:8080/posts";
+const STORAGE_KEY = "post";
 
-async function createPost(data = {}) {
-  const response = await fetch(URI, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  });
-  return await response.json();
-}
-
-async function getAllPosts() {
-  const response = await fetch(URI);
-  return await response.json();
-}
-
-const renderPosts = () => {
-  const content = document.querySelector("#mainContent");
-  getAllPosts()
+function renderPosts() {
+  const container = document.querySelector("#mainContent");
+  getData(URI)
     .then(
       (res) =>
-        (content.innerHTML = res
+        (container.innerHTML = res
           .map(
             ({ author, date, text }) =>
-              {console.log(date);
-                return (`
-      <div class="comment-block">
-          <p class="comment-text">
-            ${text}
-          </p>
-          <div class="comment-info">
-            <span class="date">${date}</span>
-            <span class="nickname">${author}</span>
-          </div>
-        </div>
-      `)}
+              `
+              <div class="comment-block">
+                <p class="comment-text">
+                  ${text}
+                </p>
+                <div class="comment-info">
+                  <span class="date">${moment(date).format(
+                    "DD/MM/YYYY, HH:mm:ss"
+                  )}</span>
+                  <span class="nickname">${author}</span>
+                </div>
+              </div>
+            `
           )
           .join(""))
     )
     .catch((err) => console.error(err));
-};
-
-const inputsCheck = () => {
-  if (!nicknameInput.value.trim().length) {
-    nickname.classList.add("error-input");
-    return false;
-  }
-  if (!postInput.value.trim().length) {
-    postInput.classList.add("error-input");
-    return false;
-  } else {
-    nicknameInput.classList.remove("error-input");
-    postInput.classList.remove("error-input");
-    return true;
-  }
-};
+}
 
 document.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.getItem(STORAGE_KEY) && isOnline()) {
+    sendDataFromLocalStorage(URI, STORAGE_KEY);
+    location.reload();
+  }
   renderPosts();
 });
 
 addPostButton.addEventListener("click", () => {
-  const check = inputsCheck();
+  if (localStorage.getItem(STORAGE_KEY) && isOnline()) {
+    sendDataFromLocalStorage(URI, STORAGE_KEY);
+  }
+
+  const check = checkInputs([nicknameInput, postInput]);
+
   if (check) {
     const data = {
       author: nicknameInput.value.trim(),
       text: postInput.value.trim(),
       date: Date.now(),
     };
-    createPost(data).then(renderPosts);
-
+    if (isOnline()) {
+      sendData(URI, data).then(renderPosts);
+    } else {
+      setLocalStorage(data);
+    }
     nicknameInput.value = "";
     postInput.value = "";
   }

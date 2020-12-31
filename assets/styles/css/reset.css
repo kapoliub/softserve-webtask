@@ -146,3 +146,10 @@ h1 {
 
 textarea {
   resize: none; }
+
+.error-input {
+  border-color: red !important; }
+
+.error-img {
+  -webkit-filter: drop-shadow(0 0 5px red);
+          filter: drop-shadow(0 0 5px red); }

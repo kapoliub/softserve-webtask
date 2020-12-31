@@ -55,25 +55,21 @@
       </div>
     </header>
     <main class="content-wrapper">
-      <h1 class="page-title">Admin</h1>
-      <div class="add-image-block">
-          <div class="new-image">
-              <img src="../assets/img/main-logo.jpg" alt="new_img">
-          </div>
-          <button class="addButton">Add image</button>
-      </div>
-      <div class="add-text-block">
-          <div class="title-text-block">
-              <input type="text" name="title" id="titleInput" placeholder="News title">
-              <textarea name="newsText" id="newsTextInput" placeholder="News text"></textarea>
-          </div>
-          <button class="addButton" id="addNews">Add news</button>
+      <h1 class="page-title">Admin panel</h1>
+      <div class="content" id="content">
+        <div class="login-form">
+          <input type="email" name="email" id="emailInput" placeholder="Email">
+          <input type="password" name="password" id="passwordInput" placeholder="Password">
+          <button id="loginButton">Log in</button>
+        </div>
       </div>
     </main>
     <footer class="footer">
-      <p>Footer</p>
+      <button id="logoutButton">Logout</button>
+
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/dragNDrop.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/admin.js"></script>
   </body>
 </html>
